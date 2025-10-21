@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin - Greetings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #0ea5a0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #fff;
+            text-align: left;
+        }
+        
+        th {
+            color: #0ea5a0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Admin - Greetings</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Created At</th>
+        </tr>
+        <% greetings.forEach(g => { %>
+            <tr>
+                <td>
+                    <%= g.name %>
+                </td>
+                <td>
+                    <%= new Date(g.createdAt).toLocaleString() %>
+                </td>
+            </tr>
+            <% }) %>
+    </table>
+</body>
+
+</html>
